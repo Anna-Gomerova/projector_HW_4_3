@@ -42,7 +42,6 @@
     font-display: fallback;
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -67,13 +66,8 @@ body {
 
 .illustration {
     width: 100%;
-
+    display: block;
 }
-
-/* picture {
-display: block;
-
-} */
 
 figure {
     margin-block-start: 0;
@@ -81,11 +75,9 @@ figure {
     margin-inline-start: 0;
     margin-inline-end: 0;
     height: 100%;
-
 }
 
 .contribution {
-
     display: grid;
     width: 100%;
     height: auto;
@@ -94,7 +86,6 @@ figure {
         "members partners";
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-
 }
 
 .contribution_section__head {
@@ -187,44 +178,57 @@ figure {
     color: #FFFFFF;
 }
 
-.section_item__name {
-padding-top: 30px;
-}
-.contribution_section_item__footer p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.03em;
-    opacity: 0.6;
-    padding-bottom: 10px;
-}
-
-
-.missing {
-    color: black;
-    opacity: 0;
+.item__text:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: cornflowerblue;
+        right: -10px;
+        z-index: -1;
+        top: 40px;
+        transform: rotate(45deg);
 }
 
-.item__picture {
-    /* min-height: 445px; */
-    width: 50%;
-}
+    .section_item__name {
+        padding-top: 30px;
+    }
 
-.contribution_section_item__footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px
-}
-
-.link {
-    width: 100px;
-    height: 100px;
-    padding: 35px;
-    justify-self: end;
-    color: #0536FC;
-    background-color: #FFFFFF;
-}
+    .contribution_section_item__footer p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        opacity: 0.6;
+        padding-bottom: 10px;
+    }
 
 
-#blocker {}
+    .missing {
+        color: black;
+        opacity: 0;
+    }
+
+    .item__picture {
+        /* min-height: 445px; */
+        width: 50%;
+    }
+
+    .contribution_section_item__footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px
+    }
+
+    .link {
+        width: 100px;
+        height: 100px;
+        padding: 35px;
+        justify-self: end;
+        color: #0536FC;
+        background-color: #FFFFFF;
+    }
+
+
+    #blocker {}
