@@ -61,12 +61,15 @@ p {
 
 body {
     font-family: 'BasisGrotesquePro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+
 }
 
-img {
-    
-    
+.illustration {
+    width: 100%;
+
 }
+
 /* picture {
 display: block;
 
@@ -78,7 +81,7 @@ figure {
     margin-inline-start: 0;
     margin-inline-end: 0;
     height: 100%;
-    
+
 }
 
 .contribution {
@@ -90,7 +93,7 @@ figure {
         "head school"
         "members partners";
     grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
 
 }
 
@@ -99,52 +102,129 @@ figure {
 }
 
 .school {
-    grid-area:  school;
-    display: flex;
-    /* flex-direction: row-reverse; */
-    /* flex-grow: 1;
-    flex-shrink: 0; */
-    
+    grid-area: school;
+
 }
 
 .members {
     grid-area: members;
-}
-  
-.partners {
-    grid-area: partners;
+    flex-direction: row-reverse;
 }
 
+.partners {
+    grid-area: partners;
+    flex-direction: row-reverse;
+}
+
+.school,
+.members,
+.partners {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.contribution_section__head {
+    padding-top: 16.66%;
+    padding-left: 29.16%;
+    padding-right: 6.94%;
+}
+
+.contribution_section__head h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150% letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #0536FC;
+    opacity: 0.9;
+}
+
+.contribution_section__head h1 {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.section_item__number {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.contribution_section__item {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+
+
 .item__text {
-    /* width: 300px;
-  height: 100vh;
-  background-color: cornflowerblue; */
-  padding-top: 20px;
-  padding-left: 20px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  /* position: relative; */
+    width: 50%;
+    padding-top: 50px;
+    padding-left: 6.94%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* position: relative; */
+}
+
+.item__text:hover {
+    /* position:absolute; */
+    background-color: #0536FC;
+    color: #FFFFFF;
+}
+
+.section_item__name {
+padding-top: 30px;
+}
+.contribution_section_item__footer p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    opacity: 0.6;
+    padding-bottom: 10px;
+}
+
+
+.missing {
+    color: black;
+    opacity: 0;
 }
 
 .item__picture {
-    height: 445px;
+    /* min-height: 445px; */
+    width: 50%;
 }
 
 .contribution_section_item__footer {
     display: flex;
     justify-content: space-between;
     gap: 16px
-  }
-  
-  .button {
+}
+
+.link {
     width: 100px;
     height: 100px;
-  }
-
-.contribution_section__item {
-
+    padding: 35px;
+    justify-self: end;
+    color: #0536FC;
+    background-color: #FFFFFF;
 }
 
-#blocker {
 
-}
+#blocker {}
